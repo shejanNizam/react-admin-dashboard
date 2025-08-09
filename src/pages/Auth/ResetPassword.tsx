@@ -60,9 +60,9 @@ const ResetPassword = () => {
           {/* Page Heading */}
           <div className="flex flex-col items-center lg:items-start">
             <PageHeading
-              backPath={"-1"}
+              backPath={-1}
               title={"Set new password"}
-              disbaledBackBtn={true}
+              disbaledBackBtn={false}
             />
             <p className="drop-shadow text-[#464343] mt-5">
               Your password must be at least 8 characters long and include an

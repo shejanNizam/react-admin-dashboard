@@ -4,7 +4,7 @@ import { cn } from "../lib/utils";
 
 type PageHeadingProps = {
   title?: string;
-  backPath?: string;
+  backPath?: string | number;
   disbaledBackBtn?: boolean;
   className?: string;
 };
@@ -21,7 +21,15 @@ const PageHeading = ({
       {!disbaledBackBtn && (
         <button
           className="outline-none px-2"
-          onClick={() => navigate(backPath || "/")}
+          onClick={() => {
+            if (typeof backPath === "number") {
+              navigate(backPath);
+            } else if (typeof backPath === "string") {
+              navigate(backPath);
+            } else {
+              navigate(-1);
+            }
+          }}
         >
           <FaArrowLeftLong size={22} />
         </button>

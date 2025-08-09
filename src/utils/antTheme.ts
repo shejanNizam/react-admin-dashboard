@@ -25,21 +25,21 @@ export const mainTheme = {
       colorBorderLG: "#00321F",
     },
     DatePicker: {
-      colorBorder: "#FF7A01",
-      colorTextPlaceholder: "#FF7A01", // Updated to use a consistent color
+      colorBorder: "#004686",
+      colorTextPlaceholder: "#004686",
     },
     Select: {
       controlHeightLG: 56,
-      colorBorder: "#FF7A01",
+      colorBorder: "#004686",
       borderRadiusLG: "16px",
-      colorTextPlaceholder: "#FF7A01",
+      colorTextPlaceholder: "#004686",
     },
     Table: {
       colorText: "#000000",
       colorTextHeading: "#000000",
       colorBgContainer: "#ffffff",
       headerBg: "#ffffff",
-      headerColor: "#FF7A01",
+      headerColor: "#004686",
       headerBorderRadius: 0,
       borderRadius: 0,
       headerSplitColor: "none",

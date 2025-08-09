@@ -1,3 +1,9 @@
+import DashboardChart from "../DashboardHome/DashboardChart";
+
 export default function Earning() {
-  return <div>Earning</div>;
+  return (
+    <div>
+      <DashboardChart />
+    </div>
+  );
 }

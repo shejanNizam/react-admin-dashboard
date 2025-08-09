@@ -84,7 +84,7 @@ const VerifyEmail = () => {
               className=""
               backPath={"/auth/forgot-password"}
               title={"Verify OTP"}
-              disbaledBackBtn={true}
+              disbaledBackBtn={false}
             />
             <p className="drop-shadow text-[#646464] mt-5 text-center lg:text-left">
               Please check your email. We have sent a code to contact @gmail.com
@@ -130,6 +130,7 @@ const VerifyEmail = () => {
                 // loading={isResending}
               >
                 {/* {isResending ? "Resending..." : "Resend OTP"} */}
+                Resend OTP
               </Button>
             </div>
 
