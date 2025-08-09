@@ -1,4 +1,4 @@
-import { CiSettings } from "react-icons/ci";
+import { CiSettings, CiUser } from "react-icons/ci";
 import { FaServicestack } from "react-icons/fa";
 import { GrMoney } from "react-icons/gr";
 import { MdCategory, MdOutlineSecurityUpdateWarning } from "react-icons/md";
@@ -8,7 +8,10 @@ import { TbAirConditioning } from "react-icons/tb";
 import Category from "../pages/Category/Category";
 import DashboardHome from "../pages/DashboardHome/DashboardHome";
 import Earning from "../pages/Earning/Earning";
+import Notifications from "../pages/Notifications/Notifications";
 import Others from "../pages/Others/Others";
+import EditMyProfile from "../pages/Profile/EditMyProfile";
+import MyProfile from "../pages/Profile/MyProfile";
 import About from "../pages/Settings/About";
 import EditAbout from "../pages/Settings/EditAbout";
 import EditPrivacyPolicy from "../pages/Settings/EditPrivacyPolicy";
@@ -23,6 +26,10 @@ export const dashboardItems = [
     path: "/",
     icon: RiDashboardHorizontalFill,
     element: <DashboardHome />,
+  },
+  {
+    path: "notifications",
+    element: <Notifications />,
   },
   {
     name: "Users",
@@ -78,16 +85,16 @@ export const dashboardItems = [
     rootPath: "settings",
     icon: CiSettings,
     children: [
-      //   {
-      //     name: "Profile",
-      //     path: "settings/profile",
-      //     icon: CiUser,
-      //     element: <MyProfile />,
-      //   },
-      //   {
-      //     path: "settings/profile/edit",
-      //     element: <EditMyProfile />,
-      //   },
+      {
+        name: "Profile",
+        path: "settings/profile",
+        icon: CiUser,
+        element: <MyProfile />,
+      },
+      {
+        path: "settings/profile/edit",
+        element: <EditMyProfile />,
+      },
       {
         name: "About Us",
         icon: FaServicestack,

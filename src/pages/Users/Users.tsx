@@ -15,7 +15,7 @@ export default function Users() {
   const data = [
     {
       key: "1",
-      name: "Al-Jamil",
+      name: "User Name",
       email: "example@gmail.com",
       address: "N/A",
       date: "02/03/2025",
@@ -24,7 +24,7 @@ export default function Users() {
     },
     {
       key: "2",
-      name: "Al-Jamil",
+      name: "User Name",
       email: "example@gmail.com",
       address: "Paris",
       date: "02/03/2025",
@@ -33,7 +33,7 @@ export default function Users() {
     },
     {
       key: "3",
-      name: "Al-Jamil",
+      name: "User Name",
       email: "example@gmail.com",
       address: "N/A",
       date: "02/03/2025",
@@ -42,7 +42,7 @@ export default function Users() {
     },
     {
       key: "4",
-      name: "Al-Jamil",
+      name: "User Name",
       email: "example@gmail.com",
       address: "USA",
       date: "02/03/2025",
@@ -51,7 +51,7 @@ export default function Users() {
     },
     {
       key: "5",
-      name: "Al-Jamil",
+      name: "User Name",
       email: "example@gmail.com",
       address: "N/A",
       date: "02/03/2025",

@@ -1,0 +1,110 @@
+import { Button, Form } from "antd";
+import { useState } from "react";
+import { FiEdit } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import defaultImage from "../../assets/host-details-image.png";
+import PasswordChangeModalForm from "../../components/PasswordChangeModalForm";
+
+const MyProfile = () => {
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Static profile data
+  const profileData = {
+    image: null,
+    name: "John Doe",
+    email: "john.doe@example.com",
+    role: "user",
+  };
+
+  const avatarImage = profileData.image ? profileData.image : defaultImage;
+
+  const handleEditProfile = () => {
+    navigate("edit", { state: { profileData } });
+  };
+
+  // Capitalize role first letter
+  const roleLabel =
+    profileData.role?.charAt(0).toUpperCase() + profileData.role?.slice(1) ||
+    "";
+
+  return (
+    <div className="space-y-[24px] min-h-[83vh] bg-white rounded-2xl">
+      <h1>Personal Info</h1>
+      <div className="w-full">
+        <div className="py-4 px-8 flex justify-end items-center">
+          <Button
+            onClick={() => setIsModalOpen(true)}
+            size="large"
+            type="default"
+            className="px-8 text-white bg-button font-semibold"
+          >
+            Change Password
+          </Button>
+        </div>
+        <Form
+          name="basic"
+          layout="vertical"
+          className="w-full grid grid-cols-12 gap-x-10 px-14 py-8"
+          autoComplete="off"
+          initialValues={{
+            image: profileData.image,
+            name: profileData.name,
+            email: profileData.email,
+          }}
+        >
+          <div className="col-span-3 space-y-6">
+            <div className="min-h-[365px] flex flex-col items-center justify-center p-8 rounded-lg border border-primary shadow-inner space-y-4">
+              <div className="my-3">
+                <img
+                  src={avatarImage}
+                  alt="Profile"
+                  className="h-[144px] w-[144px] rounded-full object-cover"
+                />
+              </div>
+              <h5 className="text-lg text-[#222222]">
+                {profileData.name || "N/A"}
+              </h5>
+              <h4 className="text-2xl text-[#222222]">{roleLabel}</h4>
+            </div>
+            <Button
+              onClick={handleEditProfile}
+              size="large"
+              type="primary"
+              className="px-8 w-full flex items-center justify-center gap-2"
+            >
+              <FiEdit />
+              Edit Profile
+            </Button>
+          </div>
+
+          <div className="col-span-5">
+            <div className="col-span-9 space-y-[24px]">
+              <div className="space-y-4">
+                <div>
+                  <p className="text-lg font-medium mb-1">Name</p>
+                  <div className="h-[56px] rounded-lg bg-[#EFFAFF] flex items-center px-4 text-primary">
+                    {profileData.name || "N/A"}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-lg font-medium mb-1">Email</p>
+                  <div className="h-[56px] rounded-lg bg-[#EFFAFF] flex items-center px-4 text-primary">
+                    {profileData.email || "N/A"}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Form>
+      </div>
+
+      <PasswordChangeModalForm
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
+    </div>
+  );
+};
+
+export default MyProfile;
