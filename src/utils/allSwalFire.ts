@@ -1,6 +1,11 @@
 import Swal from "sweetalert2";
 
-export function SuccessSwal({ title, text }) {
+type SwalParams = {
+  title: string;
+  text: string;
+};
+
+export function SuccessSwal({ title, text }: SwalParams) {
   return Swal.fire({
     title: title,
     text: text,
@@ -10,7 +15,7 @@ export function SuccessSwal({ title, text }) {
   });
 }
 
-export function ErrorSwal({ title, text }) {
+export function ErrorSwal({ title, text }: SwalParams) {
   return Swal.fire({
     title: title,
     text: text,

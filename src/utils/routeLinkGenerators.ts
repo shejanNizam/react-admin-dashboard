@@ -1,7 +1,29 @@
-import { root } from "postcss";
+type RouteItem = {
+  name: string;
+  path?: string;
+  icon?: any;
+  rootPath?: string;
+  children?: Array<{
+    name: string;
+    path?: string;
+    icon?: any;
+  }>;
+};
 
-export const routeLinkGenerators = (items) => {
-  const links = items.reduce((acc, item) => {
+type LinkItem = {
+  name: string;
+  path?: string;
+  icon?: any;
+  rootPath?: string;
+  children?: Array<{
+    subName: string;
+    subPath?: string;
+    subIcon?: any;
+  }>;
+};
+
+export const routeLinkGenerators = (items: RouteItem[]) => {
+  const links = items.reduce<LinkItem[]>((acc, item) => {
     if (item.path && item.name) {
       acc.push({
         name: item.name,
