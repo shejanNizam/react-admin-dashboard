@@ -3,6 +3,7 @@
 A modern admin dashboard built with React, Ant Design (antd), Tailwind CSS and some third party tools featuring article management and analytics visualization.
 
 ![Dashboard Preview](public/host-details-image.png)
+![Dashboard Preview](public/vite.svg)
 
 ## Features
 
