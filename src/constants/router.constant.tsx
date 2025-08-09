@@ -28,6 +28,7 @@ export const dashboardItems = [
     element: <DashboardHome />,
   },
   {
+    name: "",
     path: "notifications",
     element: <Notifications />,
   },
@@ -92,6 +93,7 @@ export const dashboardItems = [
         element: <MyProfile />,
       },
       {
+        name: "",
         path: "settings/profile/edit",
         element: <EditMyProfile />,
       },

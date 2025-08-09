@@ -1,11 +1,3 @@
-// export default function Article() {
-//   return (
-//     <div>
-//       <h2>Article</h2>
-//     </div>
-//   );
-// }
-
 import { EditOutlined, SearchOutlined } from "@ant-design/icons";
 import {
   Button,
@@ -22,7 +14,6 @@ import type { ColumnsType, TablePaginationConfig } from "antd/es/table";
 import type { SorterResult } from "antd/es/table/interface";
 import dayjs from "dayjs";
 import React, { useEffect, useState } from "react";
-// import "tailwindcss/tailwind.css";
 
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;

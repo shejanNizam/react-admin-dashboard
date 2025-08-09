@@ -3,10 +3,22 @@ import { LiaArrowLeftSolid } from "react-icons/lia";
 import { MdLockOutline } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-const PasswordChangeModalForm = ({ isModalOpen, setIsModalOpen }) => {
+interface PasswordChangeModalFormProps {
+  isModalOpen: boolean;
+  setIsModalOpen: (open: boolean) => void;
+}
+
+const PasswordChangeModalForm = ({
+  isModalOpen,
+  setIsModalOpen,
+}: PasswordChangeModalFormProps) => {
   const navigate = useNavigate();
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = (values: {
+    oldPassword?: string;
+    newPassword?: string;
+    confirmPassword?: string;
+  }) => {
     console.log("Form values:", values);
     // Static form submission handler
     setIsModalOpen(false);
