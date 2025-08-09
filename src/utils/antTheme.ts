@@ -1,13 +1,13 @@
 export const mainTheme = {
   token: {
-    colorPrimary: "#FF7A01",
+    colorPrimary: "#004686",
     colorInfo: "#00321F",
   },
   components: {
     Button: {
-      colorPrimary: "#FF7A01",
+      colorPrimary: "#004686",
       colorTextDisabled: "#000000",
-      colorPrimaryHover: "#FF3B21",
+      colorPrimaryHover: "#004686",
       colorPrimaryActive: "#DEAD35",
       colorBgContainerDisabled: "white",
       borderRadius: 4,
