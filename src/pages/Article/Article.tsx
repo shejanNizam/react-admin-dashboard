@@ -236,7 +236,7 @@ const Article: React.FC = () => {
         />
 
         <RangePicker
-          onChange={(dates, dateStrings) =>
+          onChange={(_, dateStrings) =>
             setDateRange(dateStrings as [string, string])
           }
           className="w-full md:w-64"

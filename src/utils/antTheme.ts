@@ -31,7 +31,7 @@ export const mainTheme = {
     Select: {
       controlHeightLG: 56,
       colorBorder: "#004686",
-      borderRadiusLG: "16px",
+      borderRadiusLG: 16,
       colorTextPlaceholder: "#004686",
     },
     Table: {
