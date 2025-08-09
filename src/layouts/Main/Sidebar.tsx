@@ -43,8 +43,8 @@ const SubMenu = ({
         to={subPath ?? "/"}
         className={({ isActive }) =>
           isActive
-            ? "bg-button text-white w-full px-4 py-1 flex items-center justify-start gap-3 transition-all rounded-lg"
-            : "text-black hover:text-white hover:bg-button w-full px-4 py-1 flex items-center justify-start gap-3 transition-all rounded-lg"
+            ? "bg-button text-black bg-white w-full px-4 py-1 flex items-center justify-start gap-3 transition-all rounded-lg"
+            : "text-black hover:text-black hover:bg-white w-full px-4 py-1 flex items-center justify-start gap-3 transition-all rounded-lg"
         }
       >
         <div>{subIcon ? createElement(subIcon, { size: "17" }) : null}</div>
@@ -81,13 +81,13 @@ const Sidebar = () => {
     <div className="fixed top-0 left-0 w-[326px] min-h-screen h-full p-6 pr-0">
       <div className="h-full flex flex-col justify-between bg-primary pt-[50px] border drop-shadow rounded-lg">
         {/* Logo */}
-        <div className="w-[70%] mx-auto">
+        <div className="w-[70%] mx-auto text-center text-white text-2xl font-bold">
           {/* <img className="w-[70%] mx-auto" src={logo} alt="Logo" /> */}
           Logo
         </div>
 
         {/* Navigation Links */}
-        <ul className="mt-10 max-h-[650px] overflow-y-auto space-y-1 xl:space-y-2 px-4 text-black">
+        <ul className="mt-10 max-h-[650px] overflow-y-auto space-y-1 xl:space-y-2 px-4 text-white">
           {routeLinkGenerators(dashboardItems).map(
             ({ name, icon, path, children, rootPath }, indx) =>
               children?.length ? (
@@ -100,9 +100,9 @@ const Sidebar = () => {
                       }))
                     }
                     className={cn(
-                      "outline-none hover:text-white hover:bg-button w-full px-4 py-3 flex items-center justify-between gap-3 text-lg transition-all rounded-lg",
+                      "outline-none hover:text-black hover:bg-white w-full px-4 py-3 flex items-center justify-between gap-3 text-lg transition-all rounded-lg",
                       {
-                        "bg-button text-white":
+                        "bg-white text-black":
                           name === openName?.name ||
                           (rootPath &&
                             location.pathname.includes(rootPath) &&
@@ -140,8 +140,8 @@ const Sidebar = () => {
                     to={path ?? "/"}
                     className={({ isActive }) =>
                       isActive
-                        ? "bg-button text-white w-full px-4 py-3 flex items-center justify-start gap-3 text-lg transition-all rounded-lg"
-                        : "hover:text-white text-[20px] hover:bg-button w-full px-4 py-2 flex items-center justify-start gap-3 text-lg transition-all rounded-lg"
+                        ? "bg-white text-black w-full px-4 py-3 flex items-center justify-start gap-3 text-lg transition-all rounded-lg"
+                        : "hover:text-black text-[20px] hover:bg-white w-full px-4 py-2 flex items-center justify-start gap-3 text-lg transition-all rounded-lg"
                     }
                   >
                     <div>{createElement(icon, { size: "20" })}</div>

@@ -1,15 +1,21 @@
 import { CiSettings } from "react-icons/ci";
 import { FaServicestack } from "react-icons/fa";
-import { MdOutlineSecurityUpdateWarning } from "react-icons/md";
+import { GrMoney } from "react-icons/gr";
+import { MdCategory, MdOutlineSecurityUpdateWarning } from "react-icons/md";
+import { PiUsersThree } from "react-icons/pi";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 import { TbAirConditioning } from "react-icons/tb";
+import Category from "../pages/Category/Category";
 import DashboardHome from "../pages/DashboardHome/DashboardHome";
+import Earning from "../pages/Earning/Earning";
+import Others from "../pages/Others/Others";
 import About from "../pages/Settings/About";
 import EditAbout from "../pages/Settings/EditAbout";
 import EditPrivacyPolicy from "../pages/Settings/EditPrivacyPolicy";
 import EditTermsConditions from "../pages/Settings/EditTermsConditions";
 import PrivacyPolicy from "../pages/Settings/PrivacyPolicy";
 import TermsConditions from "../pages/Settings/TermsConditions";
+import Users from "../pages/Users/Users";
 
 export const dashboardItems = [
   {
@@ -19,52 +25,52 @@ export const dashboardItems = [
     element: <DashboardHome />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Users",
+    path: "/users",
+    icon: PiUsersThree,
+    element: <Users />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Category",
+    path: "category",
+    icon: MdCategory,
+    element: <Category />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Earning",
+    path: "earning",
+    icon: GrMoney,
+    element: <Earning />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Others Comp...",
+    path: "others1",
+    icon: GrMoney,
+    element: <Others />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Others Comp...",
+    path: "others2",
+    icon: GrMoney,
+    element: <Others />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Others Comp...",
+    path: "others3",
+    icon: GrMoney,
+    element: <Others />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Others Comp...",
+    path: "others4",
+    icon: GrMoney,
+    element: <Others />,
   },
   {
-    name: "Dashboard",
-    path: "/",
-    icon: RiDashboardHorizontalFill,
-    element: <DashboardHome />,
+    name: "Others Comp...",
+    path: "others5",
+    icon: GrMoney,
+    element: <Others />,
   },
 
   {
