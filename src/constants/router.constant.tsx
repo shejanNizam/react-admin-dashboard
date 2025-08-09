@@ -5,6 +5,9 @@ import { RiDashboardHorizontalFill } from "react-icons/ri";
 import { TbAirConditioning } from "react-icons/tb";
 import DashboardHome from "../pages/DashboardHome/DashboardHome";
 import About from "../pages/Settings/About";
+import EditAbout from "../pages/Settings/EditAbout";
+import EditPrivacyPolicy from "../pages/Settings/EditPrivacyPolicy";
+import EditTermsConditions from "../pages/Settings/EditTermsConditions";
 import PrivacyPolicy from "../pages/Settings/PrivacyPolicy";
 import TermsConditions from "../pages/Settings/TermsConditions";
 
@@ -85,30 +88,33 @@ export const dashboardItems = [
         path: "settings/about-us",
         element: <About />,
       },
-      //   {
-      //     path: "settings/about-us/edit",
-      //     element: <EditAbout />,
-      //   },
+      {
+        name: "",
+        path: "settings/about-us/edit",
+        element: <EditAbout />,
+      },
       {
         name: "Terms & Services",
         icon: TbAirConditioning,
         path: "settings/terms-conditions",
         element: <TermsConditions />,
       },
-      //   {
-      //     path: "settings/terms-conditions/edit",
-      //     element: <EditTermsConditions />,
-      //   },
+      {
+        name: "",
+        path: "settings/terms-conditions/edit",
+        element: <EditTermsConditions />,
+      },
       {
         name: "Privacy Policy",
         icon: MdOutlineSecurityUpdateWarning,
         path: "settings/privacy-policy",
         element: <PrivacyPolicy />,
       },
-      //   {
-      //     path: "settings/privacy-policy/edit",
-      //     element: <EditPrivacyPolicy />,
-      //   },
+      {
+        name: "",
+        path: "settings/privacy-policy/edit",
+        element: <EditPrivacyPolicy />,
+      },
     ],
   },
 ];

@@ -63,7 +63,7 @@ const Sidebar = () => {
     Swal.fire({
       text: "Are you sure you want to logout?",
       showCancelButton: true,
-      confirmButtonText: "     Sure    ",
+      confirmButtonText: "Sure",
       cancelButtonText: "Cancel",
       showConfirmButton: true,
       confirmButtonColor: "#DC2626",
@@ -156,7 +156,7 @@ const Sidebar = () => {
         <div className="p-[24px]">
           <button
             onClick={handleLogOut}
-            className="bg-primary text-white w-full px-10 py-4 flex justify-center items-center gap-2 rounded-lg text-xl"
+            className="bg-gray-500 text-white w-full px-10 py-4 flex justify-center items-center gap-2 rounded-lg text-xl"
           >
             <BiLogOut className="text-white" size={20} />
             <span>Logout</span>

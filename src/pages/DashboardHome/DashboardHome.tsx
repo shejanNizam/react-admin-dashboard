@@ -1,7 +1,9 @@
+import Article from "../Article/Article";
+
 export default function DashboardHome() {
   return (
     <div>
-      <h3>DashboardHome</h3>
+      <Article />
     </div>
   );
 }
