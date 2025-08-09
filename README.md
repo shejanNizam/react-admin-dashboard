@@ -2,9 +2,6 @@
 
 A modern admin dashboard built with React, Ant Design (antd), Tailwind CSS and some third party tools featuring article management and analytics visualization.
 
-![Dashboard Preview](public/host-details-image.png)
-![Dashboard Preview](public/vite.svg)
-
 ## Features
 
 - **Article Management**
@@ -31,3 +28,9 @@ A modern admin dashboard built with React, Ant Design (antd), Tailwind CSS and s
 - 📊 Recharts/Chart.js (for charts)
 - 🚀 Vite (build tool)
 - 🔄 React Router v6
+
+## Some Screenshot
+
+![Dashboard Preview](public/dashboard_home.png)
+![Dashboard Preview](public/chart_month.png)
+![Dashboard Preview](public/chart_daily.png)
